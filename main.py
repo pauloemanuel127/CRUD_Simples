@@ -24,50 +24,44 @@ while True:
     elif entrada == "1":
 
         print(
-            "Digite o item a ser inserido no estoque" \
-            " e na linha seguinte digite a quantidade"
+            "\n[Adicionar item]"
         ) 
 
-        item = str(input()).lower()
-        quantidade = int(input())
+        item = str(input("Digite o item a ser inserido no estoque: ")).lower()
+        quantidade = int(input("Digite a quantidade desse item: "))
 
         lista = f.append(lista, item, quantidade)
     
     elif entrada == "2":
 
         print(
-            "Digite o item a ser verificado."
+            "\n[Verificação de Estoque]"
         )
 
-        item = str(input()).lower()
+        item = str(input("DIgite o item a ser verificado: ")).lower()
 
         f.read(lista, item)
 
     elif entrada == "3":
-        
+            
         print(
-            "Digite o item a ser alterado, o novo item que sera alocado" \
-            " (caso não tenha novo item apenas deixe em branco [aperte Enter])" \
-            " e a nova quantidade" \
-            " (caso não tenha nova quantidade digite -1)"
+            "\n[Atualização de Estoque]"
         )
-
-        item = str(input()).lower()
-        novo_item = str(input()).lower()
-        nova_quantidade = input()
+        item = str(input("Digite o item a ser alterado: ")).lower()
+        novo_item = str(input("Novo nome (ou aperte Enter para manter o mesmo): ")).lower()
+        nova_quantidade = input("Nova quantidade (ou digite -1 para manter a mesma): ")
 
         while not f.validar(nova_quantidade):
-            nova_quantidade = input()
+            nova_quantidade = input("Digite uma quantidade válida (ou -1): ")
 
         lista = f.update(lista, item, novo_item, int(nova_quantidade))
     
     elif entrada == "4":
 
         print(
-            "Digite o item a ser deletado," \
-            " lembrando que a quantidade será deletada também"
+            "\n[Remover item]"
         )
 
-        item = str(input()).lower()
+        item = str(input("Digite o item a ser deletado: ")).lower()
 
         lista = f.delete(lista, item)
