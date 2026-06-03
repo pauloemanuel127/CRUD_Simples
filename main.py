@@ -2,7 +2,7 @@ import functions as f
 
 # Definindo o lista como vazia e começando as funções
 
-mercado = None
+lista = None
 
 while True:
 
@@ -31,7 +31,7 @@ while True:
         item = str(input()).lower()
         quantidade = int(input())
 
-        mercado = f.append(mercado, item, quantidade)
+        lista = f.append(lista, item, quantidade)
     
     elif entrada == "2":
 
@@ -41,7 +41,7 @@ while True:
 
         item = str(input()).lower()
 
-        f.read(mercado, item)
+        f.read(lista, item)
 
     elif entrada == "3":
         
@@ -59,7 +59,7 @@ while True:
         while not f.validar(nova_quantidade):
             nova_quantidade = input()
 
-        mercado = f.update(mercado, item, novo_item, int(nova_quantidade))
+        lista = f.update(lista, item, novo_item, int(nova_quantidade))
     
     elif entrada == "4":
 
@@ -70,4 +70,4 @@ while True:
 
         item = str(input()).lower()
 
-        mercado = f.delete(mercado, item)
+        lista = f.delete(lista, item)
