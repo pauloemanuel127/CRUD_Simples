@@ -73,7 +73,7 @@ def update(head, item, novo_item, nova_quantidade):
             if novo_item != "":
                 current['item'] = novo_item
             
-            if nova_quantidade != "":
+            if nova_quantidade != -1:
                 current['quantidade'] = nova_quantidade
             
             print("Item atualizado com sucesso.")
