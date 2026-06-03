@@ -42,7 +42,7 @@ while True:
         item = str(input()).lower()
 
         f.read(mercado, item)
-        
+
     elif entrada == "3":
         
         print(
@@ -61,3 +61,13 @@ while True:
 
         mercado = f.update(mercado, item, novo_item, int(nova_quantidade))
     
+    elif entrada == "4":
+
+        print(
+            "Digite o item a ser deletado," \
+            " lembrando que a quantidade será deletada também"
+        )
+
+        item = str(input()).lower()
+
+        mercado = f.delete(mercado, item)
