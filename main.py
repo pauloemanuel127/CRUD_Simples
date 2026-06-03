@@ -48,7 +48,7 @@ while True:
         print(
             "Digite o item a ser alterado, o novo item que sera alocado" \
             " (caso não tenha novo item apenas deixe em branco [aperte Enter])" \
-            "e a nova quantidade" \
+            " e a nova quantidade" \
             " (caso não tenha nova quantidade digite -1)"
         )
 
