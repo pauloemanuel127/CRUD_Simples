@@ -122,7 +122,8 @@ def delete(head, item):
 def validar(valor):
     """
     Essa função é responsavel por verificar se o valor digitado na chamada update é valido.
-    Quando é valido retorna True, quando é invalido em alguma das condições retorna False."""
+    Quando é valido retorna True, quando é invalido em alguma das condições retorna False.
+    """
 
     try:
         temp = int(valor)
