@@ -20,7 +20,7 @@ def append(head, item, quantidade):
     new_node = create_node(item, quantidade)
 
     if head is None:
-        print("Item adicionado com sucesso.")
+        print("\nItem adicionado com sucesso.\n")
         return new_node
     
     current = head
@@ -29,7 +29,7 @@ def append(head, item, quantidade):
         current = current['proximo']
 
     current['proximo'] = new_node
-    print("Item adicionado com sucesso.")
+    print("\nItem adicionado com sucesso.\n")
     return head
 
 # ===============[READ]=============== 
@@ -46,12 +46,12 @@ def read(head, target):
     while current is not None:
 
         if current['item'] == target:
-            print(f"Item encontrado, você possui {current['quantidade']} {target}s.")
+            print(f"\nItem encontrado, você possui {current['quantidade']} {target}s.\n")
             return True
         
         current = current['proximo']
     
-    print("Item não encontrado, tente novamente.")
+    print("\nItem não encontrado, tente novamente.\n")
     return False
 
 # ===============[UPDATE]===============
@@ -76,12 +76,12 @@ def update(head, item, novo_item, nova_quantidade):
             if nova_quantidade != -1:
                 current['quantidade'] = nova_quantidade
             
-            print("Item atualizado com sucesso.")
+            print("\nItem atualizado com sucesso.\n")
             return head
            
         current = current['proximo']
     
-    print("Item não encontrado.")
+    print("\nItem não encontrado.\n")
     return head
 
 # ===============[DELETE]===============
@@ -96,11 +96,11 @@ def delete(head, item):
     """
 
     if head is None:
-        print("A lista está vazia.")
+        print("\nA lista está vazia.\n")
         return None
     
     if head['item'] == item:
-        print("Item removido com sucesso.")
+        print("\nItem removido com sucesso.\n")
         return head['proximo']
     
     current = head
@@ -109,12 +109,12 @@ def delete(head, item):
 
         if current['proximo']['item'] == item:
             current['proximo'] = current['proximo']['proximo']
-            print("Item removido com sucesso.")
+            print("\nItem removido com sucesso.\n")
             return head
         
         current = current['proximo']
 
-    print("Item não encontrado.")
+    print("\nItem não encontrado.\n")
     return head
 
 # ===============[Validate]==============
