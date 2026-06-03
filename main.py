@@ -25,7 +25,7 @@ while True:
 
         print(
             "Digite o item a ser inserido no estoque" \
-            "e na linha seguinte digite a quantidade"
+            " e na linha seguinte digite a quantidade"
         ) 
 
         item = str(input()).lower()
@@ -42,14 +42,14 @@ while True:
         item = str(input()).lower()
 
         f.read(mercado, item)
-    
+        
     elif entrada == "3":
         
         print(
             "Digite o item a ser alterado, o novo item que sera alocado" \
-            "(caso não tenha novo item apenas deixe em branco [aperte Enter])" \
+            " (caso não tenha novo item apenas deixe em branco [aperte Enter])" \
             "e a nova quantidade" \
-            "(caso não tenha nova quantidade apenas deixe em branco [aperte Enter])"
+            " (caso não tenha nova quantidade digite -1)"
         )
 
         item = str(input()).lower()
@@ -57,4 +57,7 @@ while True:
         nova_quantidade = input()
 
         while not f.validar(nova_quantidade):
-            print("ok!")
+            nova_quantidade = input()
+
+        mercado = f.update(mercado, item, novo_item, int(nova_quantidade))
+    

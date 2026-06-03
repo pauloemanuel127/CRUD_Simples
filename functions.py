@@ -116,3 +116,18 @@ def delete(head, item):
 
     print("Item não encontrado.")
     return head
+
+# ===============[Validate]==============
+
+def validar(valor):
+
+    try:
+        temp = int(valor)
+
+    except ValueError:
+        return False
+
+    if int(valor) >= -1:
+        return True
+    
+    else: return False
