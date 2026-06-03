@@ -38,7 +38,7 @@ while True:
             "\n[Verificação de Estoque]"
         )
 
-        item = str(input("DIgite o item a ser verificado: ")).lower()
+        item = str(input("Digite o item a ser verificado: ")).lower()
 
         f.read(lista, item)
 
