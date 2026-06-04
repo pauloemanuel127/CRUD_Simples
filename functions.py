@@ -117,7 +117,7 @@ def delete(head, item):
     print("\nItem não encontrado.\n")
     return head
 
-# ===============[Validate]==============
+# ===============[Validate]===============
 
 def validar(valor):
     """
@@ -134,4 +134,71 @@ def validar(valor):
     if int(valor) >= -1:
         return True
     
-    else: return False
+    else: 
+        return False
+
+# ===============[Save_List]===============
+
+def save_list(head):
+    """
+    Essa função salva os elementos atuais da lista encadeada em um arquivo.
+    Retorna None.
+    """
+    current = head
+
+    with open("list.txt", "w", encoding="utf-8") as arquivo:
+
+        while current is not None:
+
+            arquivo.write(f"{current['item']}, {current['quantidade']}\n")
+            current = current['proximo']
+        return
+
+# ===============[Load_List]===============
+def load_list():
+    """
+    Essa função carrega os dados do arquivo TXT devolta para a lista encadeada,
+    ela verifica se o arquivo exista, caso não mantém a lista vazia, 
+    se o arquivo existir verifica se tem algum elemento, se tiver carrega na lista,
+    se não mantem a lista vazia.
+    A função retorna sempre a lista.
+    """
+    lista = None
+
+    def add(lista, item, quantidade):
+        """
+        Essa função é idêntica à função de append, 
+        porém foi criada para ser utilizada apenas nessa circunstancia,
+        não exibe nenhuma mensagem.
+        Retorna a lista com o novo elemento.
+        """
+        new_node = create_node(item, quantidade)
+
+        if lista is None:
+            return new_node
+        
+        current = lista
+
+        while current['proximo'] is not None:
+            current = current['proximo']
+
+        current['proximo'] = new_node
+        return lista
+    
+    try:
+
+        with open("list.txt", "r") as arquivo:
+
+            linhas = arquivo.readlines()
+
+            for linha in linhas:
+
+                valores = linha.split(", ")
+                item = valores[0]
+                quantidade = int(valores[1])
+              
+                lista = add(lista, item, quantidade)
+            return lista
+    
+    except FileNotFoundError:
+        return lista

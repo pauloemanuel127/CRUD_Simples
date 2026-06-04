@@ -2,7 +2,7 @@ import functions as f
 
 # Definindo o lista como vazia e começando as funções
 
-lista = None
+lista = f.load_list()
 
 while True:
 
@@ -19,6 +19,7 @@ while True:
 
     if entrada == "5":
         print("Obrigado por usar nosso sistema!")
+        f.save_list(lista)
         break
 
     elif entrada == "1":
@@ -31,6 +32,7 @@ while True:
         quantidade = int(input("Digite a quantidade desse item: "))
 
         lista = f.append(lista, item, quantidade)
+        f.save_list(lista)
     
     elif entrada == "2":
 
@@ -55,6 +57,7 @@ while True:
             nova_quantidade = input("Digite uma quantidade válida (ou -1): ")
 
         lista = f.update(lista, item, novo_item, int(nova_quantidade))
+        f.save_list(lista)
     
     elif entrada == "4":
 
@@ -65,3 +68,4 @@ while True:
         item = str(input("Digite o item a ser deletado: ")).lower()
 
         lista = f.delete(lista, item)
+        f.save_list(lista)
