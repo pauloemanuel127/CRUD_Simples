@@ -22,7 +22,7 @@ No arquivo main.py, tentei criar uma interação com o usuário pelo terminal qu
 
 - [x] Criar um sistema CRUD funcional com todas as funções.
 - [x] Desenvolver um arquivo main.py onde fosse possível interagir e usar o código gerado.
-- [ ] Implementar persistência de dados por meio de um arquivo TXT/JSON ou banco de dados SQL.
+- [x] Implementar persistência de dados por meio de um arquivo TXT/JSON ou banco de dados SQL.
 
 ## Tecnologias e Conceitos
 
