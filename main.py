@@ -31,6 +31,9 @@ while True:
         item = str(input("Digite o item a ser inserido no estoque: ")).lower()
         quantidade = int(input("Digite a quantidade desse item: "))
 
+        while not f.validar(quantidade):
+            quantidade = input("Digite uma quantidade válida: ")
+
         lista = f.append(lista, item, quantidade)
         f.save_list(lista)
     
