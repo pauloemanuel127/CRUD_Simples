@@ -10,7 +10,7 @@ def create_node(item, quantidade):
 
     return {'item': item, 'quantidade': quantidade, 'proximo': None}
 
-def append(head, item, quantidade):
+def create(head, item, quantidade):
     """
     Essa função recebe a lista, o item a ser adicionado e a quantidade,
     com isso adiciona o novo elemento na lista.
@@ -167,7 +167,7 @@ def load_list():
 
     def add(lista, item, quantidade):
         """
-        Essa função é idêntica à função de append, 
+        Essa função é idêntica à função de create, 
         porém foi criada para ser utilizada apenas nessa circunstancia,
         não exibe nenhuma mensagem.
         Retorna a lista com o novo elemento.

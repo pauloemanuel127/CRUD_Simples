@@ -34,7 +34,7 @@ while True:
         while not f.validar(quantidade):
             quantidade = input("Digite uma quantidade válida: ")
 
-        lista = f.append(lista, item, quantidade)
+        lista = f.create(lista, item, quantidade)
         f.save_list(lista)
     
     elif entrada == "2":
