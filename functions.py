@@ -155,6 +155,7 @@ def save_list(head):
         return
 
 # ===============[Load_List]===============
+
 def load_list():
     """
     Essa função carrega os dados do arquivo TXT devolta para a lista encadeada,
