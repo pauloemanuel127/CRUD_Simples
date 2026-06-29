@@ -10,14 +10,15 @@ while True:
         "Bem vindo ao sistema de organização de itens, escolha qual operação você deseja realizar:\n" \
         "1. Adicionar novo item\n" \
         "2. Verificar estoque\n" \
-        "3. Atualizar estoque\n" \
-        "4. Remover item\n" \
-        "5. Sair"
+        "3. Exibir estoque\n"\
+        "4. Atualizar estoque\n" \
+        "5. Remover item\n" \
+        "6. Sair"
     )
 
     entrada = input()
 
-    if entrada == "5":
+    if entrada == "6":
         print("Obrigado por usar nosso sistema!")
         f.save_list(lista)
         break
@@ -49,6 +50,10 @@ while True:
 
     elif entrada == "3":
             
+        f.display(lista)
+    
+    elif entrada == "4":
+
         print(
             "\n[Atualização de Estoque]"
         )
@@ -61,9 +66,10 @@ while True:
 
         lista = f.update(lista, item, novo_item, int(nova_quantidade))
         f.save_list(lista)
-    
-    elif entrada == "4":
 
+    elif entrada == "5":
+
+        
         print(
             "\n[Remover item]"
         )
