@@ -223,3 +223,5 @@ def display(lista):
         current = current['proximo']
 
     print(" -> ".join(itens) + " -> None")
+    
+    return
