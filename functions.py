@@ -203,23 +203,3 @@ def load_list():
     
     except FileNotFoundError:
         return lista
-
-# ===============[Display]===============
-
-def display(lista):
-    """
-    Essa função é responsavel por exibir os elementos na lista seguindo a sequencia em que foram armazenados
-    """
-
-    current = lista
-    itens = []
-    sufixo = ""
-
-    while current is not None:
-        
-        sufixo = "s" if current['quantidade'] > 1 else ""
-
-        itens.append(f"{current['quantidade']} {current['item']}{sufixo}")
-        current = current['proximo']
-
-    print(" -> ".join(itens) + " -> None")
